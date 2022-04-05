@@ -16,6 +16,11 @@
 		CE4C1DBD27F75B30001597FE /* testCarbonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DBC27F75B30001597FE /* testCarbonTests.swift */; };
 		CE4C1DC727F75B30001597FE /* testCarbonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DC627F75B30001597FE /* testCarbonUITests.swift */; };
 		CE4C1DC927F75B30001597FE /* testCarbonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DC827F75B30001597FE /* testCarbonUITestsLaunchTests.swift */; };
+		CE4C1DF227FA3738001597FE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DF127FA3738001597FE /* Model.swift */; };
+		CE4C1DF527FB4535001597FE /* ModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DF327FB4535001597FE /* ModuleViewController.swift */; };
+		CE4C1DF627FB4535001597FE /* ModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4C1DF427FB4535001597FE /* ModuleViewController.xib */; };
+		CE4C1DF927FB4570001597FE /* ModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DF727FB4570001597FE /* ModuleCell.swift */; };
+		CE4C1DFA27FB4570001597FE /* ModuleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4C1DF827FB4570001597FE /* ModuleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		CE4C1DC227F75B30001597FE /* testCarbonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testCarbonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C1DC627F75B30001597FE /* testCarbonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCarbonUITests.swift; sourceTree = "<group>"; };
 		CE4C1DC827F75B30001597FE /* testCarbonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCarbonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE4C1DF127FA3738001597FE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CE4C1DF327FB4535001597FE /* ModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleViewController.swift; sourceTree = "<group>"; };
+		CE4C1DF427FB4535001597FE /* ModuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModuleViewController.xib; sourceTree = "<group>"; };
+		CE4C1DF727FB4570001597FE /* ModuleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCell.swift; sourceTree = "<group>"; };
+		CE4C1DF827FB4570001597FE /* ModuleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModuleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		CE4C1DA427F75B2F001597FE /* testCarbon */ = {
 			isa = PBXGroup;
 			children = (
+				CE4C1DE427FA3418001597FE /* Model */,
 				CE4C1DA527F75B2F001597FE /* AppDelegate.swift */,
 				CE4C1DA727F75B2F001597FE /* SceneDelegate.swift */,
 				CE4C1DA927F75B2F001597FE /* ViewController.swift */,
@@ -106,6 +117,10 @@
 				CE4C1DAE27F75B30001597FE /* Assets.xcassets */,
 				CE4C1DB027F75B30001597FE /* LaunchScreen.storyboard */,
 				CE4C1DB327F75B30001597FE /* Info.plist */,
+				CE4C1DF327FB4535001597FE /* ModuleViewController.swift */,
+				CE4C1DF427FB4535001597FE /* ModuleViewController.xib */,
+				CE4C1DF727FB4570001597FE /* ModuleCell.swift */,
+				CE4C1DF827FB4570001597FE /* ModuleCell.xib */,
 			);
 			path = testCarbon;
 			sourceTree = "<group>";
@@ -125,6 +140,14 @@
 				CE4C1DC827F75B30001597FE /* testCarbonUITestsLaunchTests.swift */,
 			);
 			path = testCarbonUITests;
+			sourceTree = "<group>";
+		};
+		CE4C1DE427FA3418001597FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C1DF127FA3738001597FE /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +256,8 @@
 			files = (
 				CE4C1DB227F75B30001597FE /* LaunchScreen.storyboard in Resources */,
 				CE4C1DAF27F75B30001597FE /* Assets.xcassets in Resources */,
+				CE4C1DFA27FB4570001597FE /* ModuleCell.xib in Resources */,
+				CE4C1DF627FB4535001597FE /* ModuleViewController.xib in Resources */,
 				CE4C1DAD27F75B2F001597FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4C1DAA27F75B2F001597FE /* ViewController.swift in Sources */,
+				CE4C1DF927FB4570001597FE /* ModuleCell.swift in Sources */,
 				CE4C1DA627F75B2F001597FE /* AppDelegate.swift in Sources */,
+				CE4C1DF527FB4535001597FE /* ModuleViewController.swift in Sources */,
+				CE4C1DF227FA3738001597FE /* Model.swift in Sources */,
 				CE4C1DA827F75B2F001597FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

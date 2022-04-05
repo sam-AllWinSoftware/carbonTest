@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="ModuleCell" customModule="testCarbon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="187" height="224"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="187" height="224"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J3-9h-Yir">
+                        <rect key="frame" x="23" y="13" width="140" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="bJZ-uT-UgJ"/>
+                            <constraint firstAttribute="height" constant="140" id="kNS-SD-ZCW"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" cornerStyle="small">
+                            <color key="baseBackgroundColor" red="0.019607843137254902" green="0.13725490196078433" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                        </buttonConfiguration>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxv-Hy-kWA">
+                        <rect key="frame" x="71" y="172" width="44.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.019607843137254902" green="0.13725490196078433" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="8J3-9h-Yir" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="23" id="K9D-F3-k1B"/>
+                <constraint firstItem="Jxv-Hy-kWA" firstAttribute="top" secondItem="8J3-9h-Yir" secondAttribute="bottom" constant="19" id="LVB-Tv-xe2"/>
+                <constraint firstItem="Jxv-Hy-kWA" firstAttribute="centerX" secondItem="8J3-9h-Yir" secondAttribute="centerX" id="YXD-Ky-Av1"/>
+                <constraint firstItem="Jxv-Hy-kWA" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="70" id="y5r-O7-rOf"/>
+            </constraints>
+            <size key="customSize" width="187" height="224"/>
+            <connections>
+                <outlet property="btnModule" destination="8J3-9h-Yir" id="hyi-Lr-Er8"/>
+                <outlet property="lblName" destination="Jxv-Hy-kWA" id="gvZ-KC-FRe"/>
+            </connections>
+            <point key="canvasLocation" x="-2234.057971014493" y="-275.89285714285711"/>
+        </collectionViewCell>
+    </objects>
+</document>
