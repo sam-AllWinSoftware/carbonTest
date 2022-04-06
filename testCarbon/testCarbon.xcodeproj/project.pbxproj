@@ -16,6 +16,12 @@
 		CE4C1DBD27F75B30001597FE /* testCarbonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DBC27F75B30001597FE /* testCarbonTests.swift */; };
 		CE4C1DC727F75B30001597FE /* testCarbonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DC627F75B30001597FE /* testCarbonUITests.swift */; };
 		CE4C1DC927F75B30001597FE /* testCarbonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C1DC827F75B30001597FE /* testCarbonUITestsLaunchTests.swift */; };
+		CEF1BC2527FC8D4C005AC1E9 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BC2427FC8D4C005AC1E9 /* Modules.swift */; };
+		CEF1BC2927FC925E005AC1E9 /* ModulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BC2727FC925E005AC1E9 /* ModulesViewController.swift */; };
+		CEF1BC2A27FC925E005AC1E9 /* ModulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1BC2827FC925E005AC1E9 /* ModulesViewController.xib */; };
+		CEF1BC2D27FC927E005AC1E9 /* ModuleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BC2B27FC927E005AC1E9 /* ModuleListCell.swift */; };
+		CEF1BC2E27FC927E005AC1E9 /* ModuleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF1BC2C27FC927E005AC1E9 /* ModuleListCell.xib */; };
+		CEF1BC3127FCB436005AC1E9 /* Trait+Compact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BC3027FCB436005AC1E9 /* Trait+Compact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		CE4C1DC227F75B30001597FE /* testCarbonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testCarbonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C1DC627F75B30001597FE /* testCarbonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCarbonUITests.swift; sourceTree = "<group>"; };
 		CE4C1DC827F75B30001597FE /* testCarbonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCarbonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEF1BC2427FC8D4C005AC1E9 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
+		CEF1BC2727FC925E005AC1E9 /* ModulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesViewController.swift; sourceTree = "<group>"; };
+		CEF1BC2827FC925E005AC1E9 /* ModulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModulesViewController.xib; sourceTree = "<group>"; };
+		CEF1BC2B27FC927E005AC1E9 /* ModuleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleListCell.swift; sourceTree = "<group>"; };
+		CEF1BC2C27FC927E005AC1E9 /* ModuleListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModuleListCell.xib; sourceTree = "<group>"; };
+		CEF1BC3027FCB436005AC1E9 /* Trait+Compact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trait+Compact.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,8 @@
 		CE4C1DA427F75B2F001597FE /* testCarbon */ = {
 			isa = PBXGroup;
 			children = (
+				CEF1BC2F27FCB411005AC1E9 /* Utilities */,
+				CEF1BC2627FC8D52005AC1E9 /* Model */,
 				CE4C1DA527F75B2F001597FE /* AppDelegate.swift */,
 				CE4C1DA727F75B2F001597FE /* SceneDelegate.swift */,
 				CE4C1DA927F75B2F001597FE /* ViewController.swift */,
@@ -106,6 +120,10 @@
 				CE4C1DAE27F75B30001597FE /* Assets.xcassets */,
 				CE4C1DB027F75B30001597FE /* LaunchScreen.storyboard */,
 				CE4C1DB327F75B30001597FE /* Info.plist */,
+				CEF1BC2727FC925E005AC1E9 /* ModulesViewController.swift */,
+				CEF1BC2827FC925E005AC1E9 /* ModulesViewController.xib */,
+				CEF1BC2B27FC927E005AC1E9 /* ModuleListCell.swift */,
+				CEF1BC2C27FC927E005AC1E9 /* ModuleListCell.xib */,
 			);
 			path = testCarbon;
 			sourceTree = "<group>";
@@ -125,6 +143,22 @@
 				CE4C1DC827F75B30001597FE /* testCarbonUITestsLaunchTests.swift */,
 			);
 			path = testCarbonUITests;
+			sourceTree = "<group>";
+		};
+		CEF1BC2627FC8D52005AC1E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1BC2427FC8D4C005AC1E9 /* Modules.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEF1BC2F27FCB411005AC1E9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1BC3027FCB436005AC1E9 /* Trait+Compact.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +265,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF1BC2E27FC927E005AC1E9 /* ModuleListCell.xib in Resources */,
 				CE4C1DB227F75B30001597FE /* LaunchScreen.storyboard in Resources */,
 				CE4C1DAF27F75B30001597FE /* Assets.xcassets in Resources */,
+				CEF1BC2A27FC925E005AC1E9 /* ModulesViewController.xib in Resources */,
 				CE4C1DAD27F75B2F001597FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +296,11 @@
 			files = (
 				CE4C1DAA27F75B2F001597FE /* ViewController.swift in Sources */,
 				CE4C1DA627F75B2F001597FE /* AppDelegate.swift in Sources */,
+				CEF1BC3127FCB436005AC1E9 /* Trait+Compact.swift in Sources */,
+				CEF1BC2927FC925E005AC1E9 /* ModulesViewController.swift in Sources */,
 				CE4C1DA827F75B2F001597FE /* SceneDelegate.swift in Sources */,
+				CEF1BC2527FC8D4C005AC1E9 /* Modules.swift in Sources */,
+				CEF1BC2D27FC927E005AC1E9 /* ModuleListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
