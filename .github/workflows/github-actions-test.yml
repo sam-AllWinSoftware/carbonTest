@@ -1,22 +1,22 @@
-name: Github Actions Test
+name: Github Actions Example
 
 on:
-   pull_request:
-   push:
-       branches:
-        - master
-        - develop
+  pull_request:
+  push:
+    branches: 
+      - master
+      - develop
 
 jobs:
-   test:
-     name: Running Units Test
-     runs-on: ubuntu-lastest
+  test:
+    name: Running Units Tests
+    runs-on: ubuntu-latest
 
-   steps:
+    steps:
     - uses: actions/checkout@v1
-    - name: Use Nose.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
-      with: 
+      with:
         node-version: ${{ matrix.node-version }}
     - name: Install
       run: npm install
