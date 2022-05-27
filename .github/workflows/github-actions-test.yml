@@ -1,6 +1,7 @@
 name: Reusable workflows
 
 on: [push]
+jobs: 
   workflow_call:
     # Map the workflow outputs to job outputs
     outputs:
