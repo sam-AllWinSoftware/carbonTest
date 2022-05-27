@@ -1,8 +1,6 @@
 name: Slack Issues
 
-on:
-  issues:
-    types: [opened]
+on: [push]
 
 
 jobs:
