@@ -1,9 +1,6 @@
 name: contributors-automated
 
-on:
-  schedule:
-    # Nightly at 2:30am 
-    - cron: 30 2 * * *
+on: [push]
 
 jobs:
   GenerateSourcecred:
