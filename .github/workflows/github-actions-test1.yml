@@ -1,49 +1,18 @@
-name: contributors-automated
+name: Node Continuous Integration
 
-on: [push]
+on:
+  pull_request:
+    branches: [ master ]
+
 
 jobs:
-  GenerateSourcecred:
+  test_pull_request:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v1
-    - name: Cache Data
-      id: cache-data
-      uses: actions/cache@v1
-      with:
-        path: sourcecred_data
-        key: ${{ runner.os }}-sourcecred_data
-    - name: Generate SourceCred Graphic
-      env:
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        SOURCECRED_GITHUB_TOKEN=${TOKEN} docker run -i --rm -v sourcecred_data:/data -e SOURCECRED_GITHUB_TOKEN sourcecred/sourcecred:dev load ${GITHUB_REPOSITORY}
-        SOURCECRED_GITHUB_TOKEN=${TOKEN} docker run -i --rm -v sourcecred_data:/data sourcecred/sourcecred:dev scores ${GITHUB_REPOSITORY} > scores.json
-        SOURCECRED_GITHUB_TOKEN=${TOKEN} docker run -i --rm -e SOURCECRED_GITHUB_TOKEN sourcecred/widgets < scores.json > contributors.svg
-        cat contributors.svg
-    - name: Update Branch
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        UPDATE_BRANCH: contributors-automated
-      run: |
-        printf "GitHub Actor: ${GITHUB_ACTOR}\n"
-        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-        git branch
-        printf "Branch to push to is ${UPDATE_BRANCH}\n"
-        git checkout -b ${UPDATE_BRANCH} || git checkout ${UPDATE_BRANCH}
-        git branch
-
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@users.noreply.github.com"
-
-        git pull origin ${UPDATE_BRANCH} || printf "Branch not yet on remote\n"
-        git add contributors.svg
-
-        if git diff-index --quiet HEAD --; then
-           printf "No changes\n"
-        else
-           printf "Changes\n"
-           git commit -m "Automated deployment to update contributors.svg $(date '+%Y-%m-%d')"
-           git push origin ${UPDATE_BRANCH}
-        fi
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
